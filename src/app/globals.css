@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;800&family=Work+Sans&display=swap');
+:root {
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.custom-header-height{
+  height: 600px;
+}
+@media (max-height: 1023px) {
+  .custom-header-height {
+    height: 600px;
+  }
+}
+.transition-height {
+  transition: height 3s ease-in-out;
+}
+.custom-bg-header {
+  background-image: url("https://plus.unsplash.com/premium_photo-1661764256397-af154e87b1b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.custom-clip-path {
+  clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+@media (max-width: 1024px) {
+  .custom-clip-path {
+    clip-path: none; /* Reset the clip-path for smaller screens */
+  }
+}
+.headerContainer {
+  height: 600px;
+}
+
+@media (max-width: 1024px) {
+  .headerContainer {
+    height: auto;
+  }
+}
