@@ -2,7 +2,7 @@
 import { En } from "@/enums/En";
 import { ROUTE } from "@/enums/Route";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef,memo} from "react";
 import Typed from "typed.js";
 const Header = () => {
   const el = useRef(null);
@@ -70,4 +70,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

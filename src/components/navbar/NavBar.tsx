@@ -1,5 +1,5 @@
-"use client";
-import React, { useState } from "react";
+'use client'
+import React, { useState,memo } from "react";
 import Image from "next/image";
 import { socialLinks } from "@/enums/DummyData";
 import { En } from "@/enums/En";
@@ -26,7 +26,6 @@ const NavBar = () => {
         </a>
         <Image
           className="flex md:hidden over:-translate-y-1 hover:scale-110 duration-300 cursor-pointer"
-          // style={{ position: "absolute", right: "1rem", top: "1.7rem" }}
           src={showIcon}
           alt="My Image"
           width={showBuger ? 30 : 45}
@@ -48,9 +47,9 @@ const NavBar = () => {
           <Link href={ROUTE.ABOUTUSPAGE} className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
             {En.about}
           </Link>
-          <Link href="#" className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
+          {/* <Link href="#" className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
             {En.portfolio}
-          </Link>
+          </Link> */}
         </nav>
 
         <div
@@ -63,7 +62,7 @@ const NavBar = () => {
               <a key={item.icon} href={item.link} target="_blank" rel="noopener noreferrer">
                 <Image
                   className="over:-translate-y-1 hover:scale-110 duration-300 cursor-pointer"
-                  src={item.icon} // Path to your image inside the 'public' folder
+                  src={item.icon} 
                   alt="My Image"
                   width={item.size}
                   height={item.size}
@@ -77,4 +76,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default memo(NavBar);

@@ -8,6 +8,12 @@ const En = {
     "services":"Services",
     "about":"About",
     "portfolio":"Portfolio",
+    "watch":"Watch",
+    "footerText":"@KomalWebDeveloper",
+    "country":"India",
+    "field":"Softwre Engineer",
+    "education":"BCS (Gandu)",
+    "aboutdes":"Experienced web developer with a track record of completing e-commerce and video calling applications. Hackathon winner, demonstrating creativity and problem-solving prowess. Proficient in both front-end and back-end technologies. Committed to delivering seamless user experiences. Passionate about staying ahead in the dynamic tech landscape",
 }
 
 export {En}

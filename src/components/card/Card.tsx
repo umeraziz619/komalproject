@@ -1,18 +1,16 @@
-import React from "react";
+import React,{memo} from "react";
 import Image from "next/image";
+import { En } from "@/enums/En";
 
-interface CardLgProps{
-    image:string,
-    title:string,
-    description:string,
-}
-const CardLg = ({image,title,description}:CardLgProps) => {
+
+const Card = ({item}:any) => {
+  
   return (
     <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
       <div className="rounded-lg h-64 overflow-hidden">
         <Image
           style={{ borderRadius: "2rem" }}
-          src={image}
+          src={item?.image}
           className="object-cover object-center h-full w-full max-md:w-96 max-sm:mx-auto"
           alt="My Image"
           height={1000}
@@ -20,13 +18,13 @@ const CardLg = ({image,title,description}:CardLgProps) => {
         />
       </div>
       <h2 className="text-xl font-medium title-font text-gray-900 mt-5 text-center">
-        {title}
+        {item?.title}
       </h2>
       <p className="text-base leading-relaxed mt-2 text-center">
-        {description}
+        {item?.description}
       </p>
-      <a className="text-white bg-slate-700 py-2 px-4 inline-flex items-center mt-3 rounded-2xl mb-8">
-        Watch
+      <a href={item?.link} target="_blank" className="text-white bg-slate-700 py-2 px-4 inline-flex items-center mt-3 rounded-2xl mb-8 cursor-pointer">
+        {En.watch}
         <svg
           fill="none"
           stroke="currentColor"
@@ -43,4 +41,4 @@ const CardLg = ({image,title,description}:CardLgProps) => {
   );
 };
 
-export default CardLg;
+export default memo(Card);

@@ -40,7 +40,7 @@ body {
 
 @media (max-width: 1024px) {
   .custom-clip-path {
-    clip-path: none; /* Reset the clip-path for smaller screens */
+    clip-path: none;
   }
 }
 .headerContainer {
