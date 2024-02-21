@@ -1,3 +1,6 @@
 import NavBar from "./navbar";
-
-export {NavBar}
+import Header from "./header";
+import Footer from "./footer";
+import Profile from "./profile";
+import CardLg from "./cardlg";
+export {NavBar,Header,Footer,Profile,CardLg}

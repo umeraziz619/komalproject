@@ -1,9 +1,13 @@
+import { Footer, NavBar } from '@/components'
 import React from 'react'
 
-const page = () => {
+const Services = () => {
   return (
-    <div>page</div>
+    <>
+    <NavBar />
+    <Footer />
+    </>
   )
 }
 
-export default page
+export default Services

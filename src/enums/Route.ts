@@ -1,6 +1,6 @@
-export const Routes = {
-    home:"/",
-    services:"/services",
-    blog:"/blog",
-    portfolio:"/portfolio"
+export const ROUTE = {
+    HOMEPAGE:"/",
+    SERVICESPAGE:"/services",
+    ABOUTUSPAGE:"/aboutus",
+    PORTFOLIOPAGE:"/portfolio"
 }

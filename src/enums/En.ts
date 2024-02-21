@@ -6,7 +6,7 @@ const En = {
     "learnMore":"Learn More",
     "home":"Home",
     "services":"Services",
-    "blog":"Blog",
+    "about":"About",
     "portfolio":"Portfolio",
 }
 

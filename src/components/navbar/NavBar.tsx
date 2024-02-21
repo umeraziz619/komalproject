@@ -4,6 +4,7 @@ import Image from "next/image";
 import { socialLinks } from "@/enums/DummyData";
 import { En } from "@/enums/En";
 import Link from "next/link";
+import { ROUTE } from "@/enums/Route";
 
 const NavBar = () => {
   const [showBuger, setShowBuger] = useState(true);
@@ -11,7 +12,7 @@ const NavBar = () => {
   const handleNavVisible = () => [setShowBuger(!showBuger)];
   let showIcon = showBuger ? "/burger.svg" : "/cross.svg";
   return (
-    <header className="text-gray-600 body-font bg-slate-700 transition-all duration-1000 ease-in" >
+    <header className="text-gray-600 body-font bg-slate-700 transition-all duration-1000 ease-in sticky top-0 z-10" >
       <div className="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
         <div className="flex justify-between items-center w-full md:w-auto">
         <a className={`flex title-font font-medium items-center text-gray-900 ${!showBuger && "mb-4"} md:mb-0 cursor-pointer`}>
@@ -38,16 +39,16 @@ const NavBar = () => {
             showBuger && "hidden"
           } md:flex`}
         >
-          <Link href={"/"} className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
+          <Link href={ROUTE.HOMEPAGE} className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
             {En.home}
           </Link>
-          <Link href={"/services"} className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
+          <Link href={ROUTE.SERVICESPAGE} className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
             {En.services}
           </Link>
-          <Link href={""} className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
-            {En.blog}
+          <Link href={ROUTE.ABOUTUSPAGE} className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
+            {En.about}
           </Link>
-          <Link href={"/portfolio"} className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
+          <Link href="#" className="mr-5 text-white over:-translate-y-1 hover:scale-110 duration-300 font-medium cursor-pointer">
             {En.portfolio}
           </Link>
         </nav>
